@@ -1,0 +1,1022 @@
+:root {
+  --bg: #ffffff;
+  --bg-alt: #fafafa;
+  --text: #111111;
+  --muted: #666666;
+  --accent: #d8232a;
+  --accent-soft: #ffe5e7;
+  --border: #e3e3e3;
+  --radius: 14px;
+  --shadow: 0 18px 40px rgba(0,0,0,0.10);
+  --container: 1180px;
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: var(--bg);
+  color: var(--text);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* CONTAINER */
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* TOP STRIP */
+
+.top-strip {
+  background: #000;
+  color: #fff;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.45rem 0.5rem;
+}
+
+/* HEADER */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+}
+
+.logo-block {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  font-size: 0.95rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.main-nav a:hover {
+  color: var(--accent);
+}
+
+.nav-cta {
+  padding: 0.45rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+}
+
+/* BUTTONS */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.btn.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 24px 50px rgba(0,0,0,0.18);
+}
+
+.btn.secondary {
+  background: #fff;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn.secondary:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn.small {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.8rem;
+}
+
+/* SECTION HEADER */
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.section-header p {
+  max-width: 460px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* HERO */
+
+.hero {
+  padding: 3.5rem 0 3rem;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 1rem;
+}
+
+.hero-text p {
+  color: var(--muted);
+  max-width: 430px;
+  margin: 0 0 1.6rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.hero-badges span {
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.9rem;
+  background: #f9f9f9;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-photo {
+  max-width: 420px;
+  border-radius: 50px;
+  overflow: hidden;
+  border: 10px solid #fff;
+  box-shadow: var(--shadow);
+}
+
+/* FEATURE BURGER (REKLAMNI BLOK) */
+
+.feature-burger {
+  padding: 2.7rem 0 3rem;
+  background: var(--bg-alt);
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 26px;
+  box-shadow: var(--shadow);
+  padding: 1.8rem 1.8rem;
+}
+
+.feature-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 2.2rem;
+  align-items: center;
+}
+
+.feature-text h2 {
+  margin: 0 0 0.7rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.feature-text p {
+  margin: 0 0 1.1rem;
+  color: var(--muted);
+}
+
+.feature-img img {
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.15);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* FOOD GRID (THE FOOD) */
+
+.food-grid-section {
+  padding: 3.2rem 0 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* fake “pomfrit/krastavac” svetlo u uglovima */
+.food-grid-section::before,
+.food-grid-section::after {
+  content: "";
+  position: absolute;
+  inset: auto auto -80px -40px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(255,206,120,0.9), transparent 60%);
+  opacity: 0.4;
+  pointer-events: none;
+}
+.food-grid-section::after {
+  inset: auto -40px -60px auto;
+  background: radial-gradient(circle, rgba(132, 210, 120,0.9), transparent 60%);
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+.food-card {
+  border-radius: 24px;
+  border: 2px solid var(--accent-soft);
+  background: #fff;
+  overflow: hidden;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.food-card-img img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.food-card-body {
+  padding: 0.9rem 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.food-card-body h3 {
+  margin: 0;
+  font-size: 0.98rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.food-card-body p {
+  margin: 0;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.food-card-footer {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0.5rem;
+}
+
+.food-card-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.food-grid-explore {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* ABOUT FOOD */
+
+.about-food-section {
+  padding: 3rem 0 3.2rem;
+  background: var(--bg-alt);
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.about-text h2 {
+  margin: 0 0 1rem;
+  font-size: 1.9rem;
+}
+
+.about-text p {
+  margin: 0 0 0.8rem;
+  color: var(--muted);
+}
+
+.about-img img {
+  border-radius: 26px;
+  box-shadow: var(--shadow);
+}
+
+/* LOKACIJE */
+
+.locations-section {
+  padding: 3.2rem 0 3.4rem;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+.location-card {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 1.3rem 1.4rem;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+}
+
+.location-card h3 {
+  margin: 0 0 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.9rem;
+}
+
+.location-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+/* KG SECTION */
+
+.kg-section {
+  padding: 3rem 0 3.4rem;
+  background: #fff7f7;
+}
+
+.kg-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.kg-text h2 {
+  margin: 0 0 0.7rem;
+}
+
+.kg-text p {
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
+.kg-img img {
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+/* ORDER SECTION */
+
+.order-section {
+  padding: 3.4rem 0 3.6rem;
+  background: var(--bg-alt);
+}
+
+.order-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.6fr 1.1fr;
+  gap: 1.6rem;
+  align-items: flex-start;
+}
+
+/* leva kolona */
+
+.order-categories {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.category-btn {
+  width: 100%;
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.category-btn:hover {
+  background: #f5f5f5;
+}
+
+.category-btn.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* sredina */
+
+.order-items {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 1rem 1.1rem;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.05);
+}
+
+.order-items h3 {
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.9rem;
+}
+
+.items-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.1rem;
+}
+
+.item-card {
+  background: #fff;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.item-card-img img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.item-card-body {
+  padding: 0.8rem 0.9rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.item-card-body h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.item-card-desc {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.item-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.6rem;
+}
+
+.item-card-price {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* desno */
+
+.order-cart {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 0.9rem 1rem;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.06);
+}
+
+.order-cart h3 {
+  margin: 0 0 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.9rem;
+}
+
+.cart-empty {
+  margin: 0 0 0.4rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.cart-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.cart-row:last-child {
+  border-bottom: none;
+}
+
+.cart-row-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.cart-row-extras {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.cart-row-price {
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+.cart-summary {
+  margin-top: 0.8rem;
+  border-top: 1px solid var(--border);
+  padding-top: 0.7rem;
+}
+
+.cart-total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.cart-checkout-btn,
+.cart-clear-btn {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.cart-checkout-btn:disabled,
+.cart-clear-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* CHECKOUT */
+
+.checkout-section {
+  padding: 3.4rem 0 3.6rem;
+}
+
+.checkout-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.1fr);
+  gap: 1.8rem;
+  align-items: flex-start;
+}
+
+.checkout-form {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 1.4rem 1.3rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.checkout-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+  padding: 0.6rem 0.75rem;
+  border-radius: 9px;
+  border: 1px solid var(--border);
+  font-family: var(--font-main);
+  font-size: 0.9rem;
+}
+
+.checkout-info {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.checkout-summary {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 1.1rem 1.1rem;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.05);
+}
+
+.checkout-summary h3 {
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.9rem;
+}
+
+/* BOTTOM MARQUEE – beskonačna traka */
+
+.bottom-marquee {
+  background: #111;
+  color: #fff;
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.bottom-marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+}
+
+.bottom-marquee-track span {
+  padding: 0.7rem 2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* FOOTER */
+
+.site-footer {
+  background: #000;
+  color: #aaa;
+  padding: 1.4rem 0;
+  font-size: 0.8rem;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* MODAL */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal-backdrop.open {
+  display: flex;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 20px;
+  max-width: 780px;
+  width: 100%;
+  padding: 1.3rem 1.4rem 1.2rem;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.modal-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.modal-main h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.modal-desc {
+  margin: 0 0 0.8rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.modal-qty-row,
+.modal-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.7rem;
+}
+
+.qty-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  padding: 0.15rem 0.5rem;
+}
+
+.qty-controls button {
+  border: none;
+  background: transparent;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.modal-side h4 {
+  margin: 0 0 0.35rem;
+}
+
+.modal-side-note {
+  margin: 0 0 0.6rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* PIĆA – moderni pill sa slikom */
+
+.drinks-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.drink-option {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #fafafa;
+  cursor: pointer;
+  transition: 0.18s ease;
+  white-space: nowrap;
+}
+
+.drink-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.drink-option span {
+  pointer-events: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.drink-option span img {
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.drink-option:hover {
+  border-color: var(--accent);
+  background: #fff;
+}
+
+.drink-option input:checked + span {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.2rem 0.4rem;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .hero-layout,
+  .feature-layout,
+  .about-layout,
+  .kg-layout,
+  .checkout-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    order: -1;
+  }
+
+  .locations-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .order-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .order-categories {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .order-categories .category-btn {
+    flex: 1 0 45%;
+  }
+}
+
+@media (max-width: 780px) {
+  .main-nav {
+    display: none;
+  }
+
+  .main-nav.nav-open {
+    position: absolute;
+    top: 56px;
+    right: 1.5rem;
+    background: #fff;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+    flex-direction: column;
+    gap: 0.8rem;
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .food-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .locations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-body {
+    grid-template-columns: 1fr;
+  }
+
+  .drinks-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .food-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 2.5rem;
+  }
+}

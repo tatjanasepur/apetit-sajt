@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Apetit Mirijevo — Roštilj, pizze, palačinke</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  
+  <div class="top-strip">
+    SVEŽA HRANA · NE BRZA HRANA · ROŠTILJ NA ĆUMURU · DOSTAVA MIRIJEV0 ·
+  </div>
+
+  
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#top" class="logo-block">
+        <img src="assets/apetit-logo.png" alt="Apetit Mirijevo logo" class="logo-img">
+        <span class="logo-text">Apetit Mirijevo</span>
+      </a>
+      <nav class="main-nav">
+        <a href="#hero">Početna</a>
+        <a href="#food-grid">Meni</a>
+        <a href="#about-food">O našoj hrani</a>
+        <a href="#locations">Lokacije</a>
+        <a href="#order" class="nav-cta">Poruči odmah</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Otvori meni">☰</button>
+    </div>
+  </header>
+
+  <main id="top">
+    
+    <section id="hero" class="hero">
+      <div class="container hero-layout">
+        <div class="hero-text">
+          <h1>Pljeskavice i pizze<br>koje se pamte.</h1>
+          <p>
+            Apetit Mirijevo — roštilj na ćumuru, pizze, sendviči i palačinke,
+            pripremljeni kada poručiš, ne satima ranije.
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn primary" data-start-order>
+              Započni narudžbinu
+            </button>
+            <a href="#food-grid" class="btn secondary">
+              Pogledaj meni
+            </a>
+          </div>
+
+          <div class="hero-badges">
+            <span>Rableova 3, Mirijevo</span>
+            <span>Dostava i preuzimanje</span>
+            <span>Roštilj na kilogram</span>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <div class="hero-photo">
+            <img src="assets/img/hero-pljeskavica.jpg" alt="Apetit pljeskavica">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="feature-burger">
+      <div class="container">
+        <div class="feature-card">
+          <div class="feature-layout">
+            <div class="feature-text">
+              <h2>Probaj našu gurmansku pljeskavicu</h2>
+              <p>
+                Najčešće poručivana pljeskavica u Apetitu — punjena, sočna,
+                pečena na ćumuru. Izaberi prilog i piće, a mi pečemo kad poručiš.
+              </p>
+              <button class="btn primary" data-open-item="gurmanska-pljeskavica">
+                Poruči odmah
+              </button>
+            </div>
+            <div class="feature-img">
+              <img src="assets/img/gurmanska.jpg" alt="Gurmanska pljeskavica">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="food-grid" class="food-grid-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Hrana</h2>
+          <p>Izaberi kategoriju — roštilj, pizze, palačinke ili nešto “sa strane”.</p>
+        </div>
+
+        <div class="food-grid" id="category-grid">
+          
+        </div>
+
+        <div class="food-grid-explore">
+          <button class="btn primary" data-start-order>
+            Istraži ceo meni
+          </button>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="about-food" class="about-food-section">
+      <div class="container about-layout">
+        <div class="about-text">
+          <h2>O našoj hrani</h2>
+          <p>
+            Kod nas nema unapred pečenih pljeskavica i podgrevanja. Svaki roštilj
+            ide na rešetku kada stigne tvoja narudžbina.
+          </p>
+          <p>
+            Pizze pečemo “do kraja” — hrskava korica, pun preljev, bez štednje na
+            sastojcima. Palačinke punimo kako treba, ne samo za sliku.
+          </p>
+        </div>
+        <div class="about-img">
+          <img src="assets/img/about-rostilj.jpg" alt="Roštilj Apetit">
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="locations" class="locations-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Pronađi nas</h2>
+          <p>Rableova 3, Mirijevo — Apetit fast food.</p>
+        </div>
+        <div class="locations-grid">
+          <article class="location-card">
+            <h3>Mirijevo</h3>
+            <p>Rableova 3</p>
+            <p>Radno vreme: 10:00 – 24:00</p>
+            <p>Dostava + preuzimanje</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="kg-section">
+      <div class="container kg-layout">
+        <div class="kg-text">
+          <h2>Ručate u društvu?</h2>
+          <p>
+            Kod nas možeš da poručiš roštilj na kilogram — dovoljno za društvo,
+            slavlje ili utakmicu. Izaberi miks mesa, priloge i piće.
+          </p>
+          <button class="btn primary" data-open-category="rostilj-kg">
+            Poruči roštilj na kilogram
+          </button>
+        </div>
+        <div class="kg-img">
+          <img src="assets/img/rostilj-mix.jpg" alt="Roštilj na kilogram">
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="order" class="order-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Napravi svoju narudžbinu</h2>
+          <p>Izaberi kategoriju, dodaj proizvode u korpu i pošalji narudžbinu.</p>
+        </div>
+
+        <div class="order-layout">
+         
+          <aside class="order-categories" id="order-categories">
+           
+          </aside>
+
+          <!-- SREDINA: PROIZVODI -->
+          <div class="order-items">
+            <h3 id="current-category-title">Izaberi kategoriju</h3>
+            <ul id="items-list" class="items-list">
+              <!-- JS lista proizvode kao kartice -->
+            </ul>
+          </div>
+
+          <!-- DESNO: KORPA -->
+          <aside class="order-cart">
+            <h3>Korpa</h3>
+            <div id="cart-items"></div>
+            <div class="cart-summary">
+              <div class="cart-total-row">
+                <span>Ukupno:</span>
+                <span id="cart-total">0 RSD</span>
+              </div>
+              <button class="btn primary cart-checkout-btn" id="go-checkout" disabled>
+                Idi na narudžbinu
+              </button>
+              <button class="btn secondary cart-clear-btn" id="clear-cart" disabled>
+                Isprazni korpu
+              </button>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHECKOUT / NARUDŽBINA -->
+    <section id="checkout" class="checkout-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Završi narudžbinu</h2>
+          <p>Ostavi podatke za dostavu ili preuzimanje.</p>
+        </div>
+
+        <div class="checkout-layout">
+          <form id="checkout-form" class="checkout-form">
+            <label>
+              Ime i prezime
+              <input type="text" name="name" required>
+            </label>
+            <label>
+              Telefon
+              <input type="tel" name="phone" required>
+            </label>
+            <label>
+              Adresa (ako je dostava)
+              <input type="text" name="address" placeholder="Ulica i broj, sprat, ulaz...">
+            </label>
+            <label>
+              Napomena za porudžbinu
+              <textarea name="note" rows="3" placeholder="Bez luka, vreme dostave, itd."></textarea>
+            </label>
+
+            <button type="submit" class="btn primary" id="submit-order">
+              Pošalji narudžbinu (demo)
+            </button>
+            <p class="checkout-info">
+              Napomena: Ovo je demo verzija sajta — narudžbina se ne šalje automatski
+              u lokal. Kada budemo povezali backend / Viber / mail, ovde će ići prava narudžbina.
+            </p>
+          </form>
+
+          <div class="checkout-summary">
+            <h3>Pregled korpe</h3>
+            <div id="checkout-cart"></div>
+            <div class="cart-total-row">
+              <span>Ukupno:</span>
+              <span id="checkout-total">0 RSD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DONJA POKRETNA TRAKA -->
+    <section class="bottom-marquee">
+      <div class="bottom-marquee-track">
+        <span>SVEŽA HRANA · NE BRZA HRANA · ROŠTILJ NA ĆUMURU · PIZZE IZ PEĆI · PALAČINKE PUNJENE DO KRAJA ·</span>
+        <span>SVEŽA HRANA · NE BRZA HRANA · ROŠTILJ NA ĆUMURU · PIZZE IZ PEĆI · PALAČINKE PUNJENE DO KRAJA ·</span>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Apetit Mirijevo — Rableova 3</p>
+      <div class="footer-links">
+        <a href="#hero">Početna</a>
+        <a href="#food-grid">Meni</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL ZA PROIZVOD -->
+  <div class="modal-backdrop" id="product-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">×</button>
+      <div class="modal-body">
+        <div class="modal-main">
+          <h3 id="modal-title">Naziv proizvoda</h3>
+          <p id="modal-desc" class="modal-desc"></p>
+          <div class="modal-qty-row">
+            <span>Količina:</span>
+            <div class="qty-controls">
+              <button type="button" id="qty-minus">−</button>
+              <span id="qty-value">1</span>
+              <button type="button" id="qty-plus">+</button>
+            </div>
+          </div>
+          <div class="modal-price-row">
+            <span>Cena po komadu:</span>
+            <span id="modal-price">0 RSD</span>
+          </div>
+        </div>
+        <div class="modal-side">
+          <h4>Piće uz ovo?</h4>
+          <p class="modal-side-note">Izaberi piće, dodaćemo ga u korpu uz porudžbinu.</p>
+          <div id="drinks-list" class="drinks-list">
+            <!-- JS puni pića -->
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn primary" id="add-to-cart">
+          Dodaj u korpu
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
