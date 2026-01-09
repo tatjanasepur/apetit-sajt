@@ -1,15 +1,11 @@
-// SCRIPT.JS – Apetit Mirijevo
 
-// -------------------------
-// POMOĆNE STVARI
-// -------------------------
 
 const yearEl = document.getElementById("year");
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
-// mobilni meni
+
 const navToggle = document.querySelector(".nav-toggle");
 const mainNav = document.querySelector(".main-nav");
 
@@ -19,7 +15,7 @@ if (navToggle && mainNav) {
   });
 }
 
-// skrol do order sekcije
+
 function scrollToOrder() {
   const orderSection = document.getElementById("order");
   if (orderSection) {
@@ -27,16 +23,12 @@ function scrollToOrder() {
   }
 }
 
-// svi elementi koji startuju narudžbinu
+
 document.querySelectorAll("[data-start-order]").forEach((btn) => {
   btn.addEventListener("click", scrollToOrder);
 });
 
-// -------------------------
-// MENI PODACI
-// -------------------------
 
-// ovde možeš menjati cene, nazive, opise, slike…
 
 const MENU_DATA = [
   {
@@ -462,7 +454,7 @@ const MENU_DATA = [
   },
 ];
 
-// pića koja se nude u modalu “Piće uz ovo?”
+
 const DRINKS = [
   { id: "d-cola", name: "Coca-Cola 0.5l" },
   { id: "d-cola-zero", name: "Coca-Cola Zero 0.5l" },
@@ -473,7 +465,7 @@ const DRINKS = [
   { id: "d-ultra", name: "Ultra Energy" },
 ];
 
-// helper da iz DRINKS pregazimo u stvarne stavke iz kategorije voda-sokovi
+
 function getDrinkPriceByName(name) {
   const cat = MENU_DATA.find((c) => c.id === "voda-sokovi");
   if (!cat) return 0;
@@ -481,9 +473,7 @@ function getDrinkPriceByName(name) {
   return item ? item.price : 0;
 }
 
-// -------------------------
-// RENDER KATEGORIJA & GRID
-// -------------------------
+
 
 const categoryGrid = document.getElementById("category-grid");
 const orderCategoriesEl = document.getElementById("order-categories");
@@ -548,9 +538,6 @@ function setActiveCategory(categoryId) {
   renderItemsForCategory(categoryId);
 }
 
-// -------------------------
-// ITEMS LISTA
-// -------------------------
 
 function renderItemsForCategory(categoryId) {
   if (!itemsListEl) return;
@@ -589,7 +576,7 @@ function renderItemsForCategory(categoryId) {
     itemsListEl.appendChild(li);
   });
 
-  // vežemo događaje za nove dugmiće
+  
   itemsListEl.querySelectorAll("[data-open-item]").forEach((btn) => {
     btn.addEventListener("click", () => {
       const id = btn.getAttribute("data-open-item");
@@ -598,9 +585,7 @@ function renderItemsForCategory(categoryId) {
   });
 }
 
-// -------------------------
-// MODAL ZA PROIZVOD
-// -------------------------
+
 
 const modalBackdrop = document.getElementById("product-modal");
 const modalCloseBtn = document.getElementById("modal-close");
@@ -635,7 +620,7 @@ function openItemModal(itemId) {
   modalDescEl.textContent = item.desc || "";
   modalPriceEl.textContent = `${item.price} RSD`;
 
-  // pića u modalu
+  
   if (drinksListEl) {
     drinksListEl.innerHTML = "";
     DRINKS.forEach((d) => {
@@ -689,9 +674,7 @@ if (qtyPlusBtn) {
   });
 }
 
-// -------------------------
-// KORPA
-// -------------------------
+
 
 let cart = [];
 
@@ -748,7 +731,7 @@ function updateCartUI() {
     clearCartBtn.disabled = disabled;
   }
 
-  // checkout deo
+  
   if (checkoutCartEl && checkoutTotalEl) {
     checkoutCartEl.innerHTML = cartItemsEl.innerHTML;
     checkoutTotalEl.textContent = `${total} RSD`;
@@ -775,7 +758,7 @@ if (addToCartBtn) {
   addToCartBtn.addEventListener("click", () => {
     if (!currentModalItem) return;
 
-    // izabrana pića
+   
     const chosenDrinks = [];
     if (drinksListEl) {
       drinksListEl.querySelectorAll("input[type=checkbox]:checked").forEach((input) => {
@@ -811,9 +794,7 @@ if (addToCartBtn) {
   });
 }
 
-// -------------------------
-// CHECKOUT FORMA (ZA SAD DEMO)
-// -------------------------
+
 
 const checkoutForm = document.getElementById("checkout-form");
 
@@ -826,23 +807,16 @@ if (checkoutForm) {
   });
 }
 
-// -------------------------
-// BOTTOM MARQUEE – beskonačno
-// (HTML već ima dva <span> unutra)
-// -------------------------
 
-// ništa ovde ne moramo u JS, sve radi preko CSS animacije
-// samo da budemo sigurni da klasa postoji:
+
+
 const bottomMarquee = document.querySelector(".bottom-marquee-track");
 if (bottomMarquee && bottomMarquee.children.length < 2) {
-  // ako slučajno ima samo jedan span, dupliramo tekst
+  
   const clone = bottomMarquee.firstElementChild.cloneNode(true);
   bottomMarquee.appendChild(clone);
 }
 
-// -------------------------
-// INIT
-// -------------------------
 
 renderCategoryGrid();
 renderOrderCategories();
